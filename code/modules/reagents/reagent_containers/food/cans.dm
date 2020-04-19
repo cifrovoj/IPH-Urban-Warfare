@@ -128,3 +128,55 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/sodawater/New()
 	..()
 	reagents.add_reagent(/datum/reagent/drink/sodawater, 50)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_bakedbeans //poo
+	name = "can of baked beans"
+	desc = "The best thing you can eat, here in the trench."
+	icon_state = "canned_bakedbeans"
+	center_of_mass = "x=15;y=8"
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_bakedbeans/New()
+	..()
+	reagents.add_reagent(/datum/reagent/nutriment/protein, 40)
+	reagents.add_reagent(/datum/reagent/drink/juice/tomato, 10)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_bakedbeans/open(mob/user)
+	playsound(loc,'sound/effects/bonebreak1.ogg', rand(10,50), 1)
+	to_chat(user, "<span class='notice'>You use your bare goddamn hands to open \the [src], fucking powerfull!</span>")
+	icon_state = "canned_bakedbeans_empty"
+	atom_flags |= ATOM_FLAG_OPEN_CONTAINER
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_kidneybeans //pee
+	name = "can of kidney beans"
+	desc = "Not real kidneys, but better than eating grass. Also a bit  spicy."
+	icon_state = "canned_kidneybeans"
+	center_of_mass = "x=15;y=8"
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_kidneybeans/New()
+	..()
+	reagents.add_reagent(/datum/reagent/nutriment/protein, 40)
+	reagents.add_reagent(/datum/reagent/drink/juice/tomato, 5)
+	reagents.add_reagent(/datum/reagent/capsaicin, 5)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_kidneybeans/open(mob/user)
+	playsound(loc,'sound/effects/bonebreak1.ogg', rand(10,50), 1)
+	to_chat(user, "<span class='notice'>You use your bare goddamn hands to open \the [src], fucking powerfull!</span>")
+	icon_state = "canned_kidneybeans_empty"
+	atom_flags |= ATOM_FLAG_OPEN_CONTAINER
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_tomsoup
+	name = "can of tomato soup"
+	desc = "The only all-purpose food."
+	icon_state = "canned_tomatsoup"
+	center_of_mass = "x=15;y=8"
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_tomsoup/New()
+	..()
+	reagents.add_reagent(/datum/reagent/nutriment/protein, 20)
+	reagents.add_reagent(/datum/reagent/drink/juice/tomato, 30)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/can_tomsoup/open(mob/user)
+	playsound(loc,'sound/effects/bonebreak1.ogg', rand(10,50), 1)
+	to_chat(user, "<span class='notice'>You use your bare goddamn hands to open \the [src], fucking powerfull!</span>")
+	icon_state = "canned_tomatsoup_empty"
+	atom_flags |= ATOM_FLAG_OPEN_CONTAINER
