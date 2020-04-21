@@ -505,3 +505,11 @@
 	name = "box of throwing knifes"
 	desc = "It has a picture of a knife and several warning symbols on the front. <br>WARNING: Box contains sharp and cutting weaponry. Carry with care."
 	startswith = list(/obj/item/weapon/material/knife/throwing = 4)
+
+/obj/item/weapon/storage/box/mre_federal
+	name = "Federation 24h MRE"
+	desc = "The box where federals keep their food in. Or not food"
+	icon_state = "fed_mre"
+	startswith = list(/obj/item/weapon/reagent_containers/food/drinks/cans/can_tomsoup = 2,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/can_bakedbeans,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/can_kidneybeans = 2)
