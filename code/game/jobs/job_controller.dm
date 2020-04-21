@@ -552,7 +552,7 @@ var/global/datum/controller/occupations/job_master
 			H.mind.religion = H.religion
 			if(H.religion_is_legal())
 				GLOB.all_religions[LEGAL_RELIGION].followers += H.name // I don't think I want to save copies of the entire entity.
-				to_chat(H, "You are a worshipper of <b><font color='red'>[H.religion]</font></b>. It's the only legal religion in this land, do not be swayed by the heretics of <b>[ILLEGAL_RELIGION]</b>.")
+				to_chat(H, "You are a worshipper of <b><font color='red'>[H.religion]</font></b>. It's the legal religion of the land you come from. Do not be swayed by the followers of <b>[ILLEGAL_RELIGION]</b>. Jesus be saved!")
 				if(rank == "Federal Officer")
 					H.mind.prayer = accepted_prayer
 					H.verbs += /mob/living/proc/interrogate
@@ -561,7 +561,7 @@ var/global/datum/controller/occupations/job_master
 				//to_world("RELIGION TESTING FIX THIS")
 				//H.religion = "Your god here"
 				H.religion = pick(GLOB.all_religions - ILLEGAL_RELIGION - LEGAL_RELIGION)
-				to_chat(H, "You are a worshipper of the <b><font color='red'>[H.religion]</font>. It is not a legal religion of this land. Do not be caught by the <b>Inquisition</b>. Check your notes for who your brothers and sisters are.")
+				to_chat(H, "You are a worshipper of the great <b><font color='red'>[H.religion]</font>. It is not a legal religion of this land. Check your notes for who your brothers and sisters are, and bring glory to the land of Postia.")
 				//H.verbs += /mob/living/proc/make_shrine
 				H.verbs += /mob/living/proc/praise_god
 				var/obj/item/I = GLOB.all_religions[H.religion].holy_item.type
