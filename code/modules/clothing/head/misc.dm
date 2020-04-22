@@ -323,3 +323,9 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	flash_protection = FLASH_PROTECTION_MAJOR
+
+/obj/item/clothing/head/bandana/green
+	name = "separatist bandana"
+	desc = "It's a green bandana with some writing in Postian on it."
+	icon_state = "headbandseparatist"
+	item_state = "headbandseparatist"
